@@ -20,7 +20,7 @@ public class Game {
         System.out.println("Привет, дорогой друг! Мне нужна твоя помощь... Этот мир наводнили враги, которые хотят заполучить Корону Священного Пламени. Если они её получат, наш мир не спасти, поэтому все в твоих руках, Рыцарь!");
         System.out.println("На твоем пути тебе встретятся разные враги, побеждая которых, ты сможешь стать сильнее, ну и богаче, но будь осторожнее, ты наша последняя надежда!");
 
-        hero=new Knight(1000,100,complexity,(int)(complexity*0.5),0);
+        hero=new Knight(100,100,complexity,(int)(complexity*0.5),0);
         this.complexity=complexity;
         crown=false;
         r=new Random();
@@ -82,6 +82,7 @@ public class Game {
             heroActions(buf);
             enemyAction();
             back=false;
+            hero.levelUp();
         }
     }
 
@@ -127,21 +128,22 @@ public class Game {
                         return;
                     }
                 }
-                    if (knightLive) {
-                        yDamage = hero.attack();
-                        knight.getDamage(yDamage);
-                        if (knight.isLive()) {
-                            System.out.println("Вы нанесли " + yDamage + " урона рыцарю. У него осталось " + knight.hp + " здоровья");
-                        } else {
-                            money = knight.getMoney();
-                            exp = knight.getExp();
-                            hero.addMoney(money);
-                            hero.addExp(exp);
-                            System.out.println("Вы убили рыцаря и получили " + money + " золота и " + exp + " опыта");
-                            return;
-                        }
+                if (knightLive) {
+                    yDamage = hero.attack();
+                    knight.getDamage(yDamage);
+                    if (knight.isLive()) {
+                        System.out.println("Вы нанесли " + yDamage + " урона рыцарю. У него осталось " + knight.hp + " здоровья");
+                    } else {
+                        money = knight.getMoney();
+                        exp = knight.getExp();
+                        hero.addMoney(money);
+                        hero.addExp(exp);
+                        System.out.println("Вы убили рыцаря и получили " + money + " золота и " + exp + " опыта");
+                        return;
                     }
-                    break;
+                }
+
+                break;
             }
             case 2:
             {

@@ -14,7 +14,7 @@ public class Knight extends Character {
         this.money=money;
         healCounter=startHeal;
         exp=startExp;
-        level=0;
+        level=1;
     }
 
     public void addMoney(int value)
@@ -23,7 +23,7 @@ public class Knight extends Character {
     }
     public void buyHeal()
     {
-        int healPrice=80/complexity;
+        int healPrice=1000/complexity;
         if(money>healPrice) {
             money-=healPrice;
             System.out.println("You buy heal");
