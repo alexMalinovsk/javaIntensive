@@ -211,7 +211,7 @@ public class Game {
         int eDamage;
         if (mosterLive && !back) {
             if (hero.isLive() && moster.isLive()) {
-                eDamage = moster.attack();
+                eDamage = moster.attack(hero.getLevel());
                 hero.getDamage(eDamage);
                 System.out.println("Мостр нанес вам " + eDamage + " урона");
 
@@ -221,7 +221,7 @@ public class Game {
         }
         if(knightLive && !back) {
             if (hero.isLive() && knight.isLive()) {
-                eDamage = knight.attack();
+                eDamage = knight.attack(hero.getLevel());
                 hero.getDamage(eDamage);
                 System.out.println("Рыцарь нанес вам " + eDamage + " урона");
             } else {

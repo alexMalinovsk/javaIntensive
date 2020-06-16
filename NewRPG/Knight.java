@@ -46,10 +46,9 @@ public class Knight extends Character {
         return money;
     }
 
-    @Override
     public int attack()
     {
-        return r.nextInt(5)*complexity*level;
+        return r.nextInt(10)*complexity*level;
     }
 
     @Override

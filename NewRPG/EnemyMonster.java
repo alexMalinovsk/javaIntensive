@@ -6,8 +6,8 @@ public class EnemyMonster extends Character {
         super(hp,complexity);
     }
     @Override
-    public int attack()
+    public int attack(int lvl)
     {
-        return r.nextInt(80/complexity);
+        return r.nextInt(80/complexity+lvl);
     }
 }

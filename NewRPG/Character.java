@@ -19,7 +19,7 @@ public class Character {
         hp+=r.nextInt(40/complexity);
     }
 
-    public int attack()
+    public int attack(int lvl)
     {
         return r.nextInt(40/complexity);
     }
