@@ -9,6 +9,9 @@ public class Main {
         Tylpal t1=new Tylpal(25);
         Tylpal t2=new Tylpal(35);
         ArrayList<Flower> arr=new ArrayList<>();
+        Romashka rom2=new Romashka(20);
+
+        arr.add(rom2);
 
         arr.add(r);
         arr.add(t1);
