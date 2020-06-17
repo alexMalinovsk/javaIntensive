@@ -47,7 +47,7 @@ public class DoubleLinkedList<ListType> {
         size++;
     }
 
-    public ListType getElenent(int index)
+    public ListType getElement(int index)
     {
         ListNode<ListType> buf;
         buf=front;
