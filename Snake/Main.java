@@ -10,7 +10,7 @@ public class Main {
         int fieldSize = 600;
         int numOfSideDivision=75;
 
-        frame.setSize(fieldSize+10,fieldSize+30);
+        frame.setSize(fieldSize+16,fieldSize+39);
 
         frame.setLocationRelativeTo(null);
 
